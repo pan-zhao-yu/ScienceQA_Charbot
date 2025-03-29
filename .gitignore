@@ -5,7 +5,4 @@ __pycache__/
 # Ignore virtual environment
 venv/
 
-# Ignore data and vectorstore (if needed)
-data/
-vectorstore/
 .env

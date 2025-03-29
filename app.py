@@ -3,6 +3,7 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import RetrievalQA
 from chains.prompt_templates import get_prompt_template
+from datasets import load_dataset
 
 # 加载向量库
 embedding = OpenAIEmbeddings()
