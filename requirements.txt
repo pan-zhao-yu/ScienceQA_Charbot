@@ -1,5 +1,5 @@
-langchain
-openai
-faiss-cpu
-tqdm
-datasets
+langchain~=0.3.21
+tqdm~=4.67.1
+datasets~=3.5.0
+langchain-community~=0.3.20
+langchain-openai~=0.3.11
