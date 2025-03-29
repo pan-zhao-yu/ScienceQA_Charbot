@@ -7,7 +7,7 @@ from tqdm import tqdm
 import os
 import shutil
 
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ["TOKENIZERS_PARALLELISM"] = "false"#停止一些不必要的警告
 # 加载数据（字典结构，train split 是 dict 的 values）
 dataset = load_dataset("derek-thomas/ScienceQA")
 train_data = dataset["train"]

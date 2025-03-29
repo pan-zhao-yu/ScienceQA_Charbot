@@ -5,6 +5,10 @@ from chains.prompt_templates import get_prompt_template
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain_openai.chat_models import ChatOpenAI
+import logging
+#停止一些不必要的警告
+logging.getLogger("transformers.tokenization_utils_base").setLevel(logging.ERROR)
+
 
 
 embedding = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
@@ -38,8 +42,25 @@ while True:
     if query.lower() == "exit":
         break
     try:
-        answer = rag_chain.run(query)
-        print(f"\n🧠 Answer:\n{answer}")
+        #print检索到的向量库内容
+        retrieved_docs = retriever.get_relevant_documents(query)
+        print("\n📚 Retrieved Contexts:")
+        for i, doc in enumerate(retrieved_docs):
+            print(f"\n--- Chunk {i+1} ---")
+            print(doc.page_content[:500])
+
+        #然后调用 RAG
+        answer = rag_chain.invoke(query)
+        print(f"\n🧠 Answer:\n{answer}")#使用{answer['result']}可以只展示答案
     except Exception as e:
         print(f"❌ Error: {e}")
+
+        # 对比纯LLM回答
+        print("\n🤖 Compare Pure LLM Answer (No retrieval):")
+        pure_answer = llm.invoke(query)
+        print(pure_answer.content)
+
+#sample question:
+# 1. Which of these states is farthest north? "West Virginia","Louisiana","Arizona","Oklahoma"
+# 8. Is this a sentence fragment?\nDuring the construction of Mount Rushmore, approximately eight hundred million pounds of rock from the mountain to create the monument.","no","yes"
 
