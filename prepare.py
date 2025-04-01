@@ -48,7 +48,7 @@ for example in tqdm(train_data):
     documents.append(Document(page_content=content.strip(), metadata=metadata))
 
 # 分块文本（可按需修改参数）
-splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=150)
 split_docs = splitter.split_documents(documents)
 print(f"✂️ Split into {len(split_docs)} chunks")
 
