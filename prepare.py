@@ -7,7 +7,7 @@ from tqdm import tqdm
 import os
 import shutil
 
-os.environ["TOKENIZERS_PARALLELISM"] = "false"#停止一些不必要的警告
+os.environ["TOKENIZERS_PARALLELISM"] = "false" #停止一些不必要的警告
 # 加载数据（字典结构，train split 是 dict 的 values）
 dataset = load_dataset("derek-thomas/ScienceQA")
 train_data = dataset["train"]
@@ -65,9 +65,9 @@ if os.path.isdir(save_path):
 
 # 构建 FAISS 向量库
 vectorstore = FAISS.from_documents(split_docs, embedding_model)
-print("✅ FAISS vectorstore created")
+print("FAISS vectorstore created")
 
 # 保存向量库
 os.makedirs("vectorstore", exist_ok=True)
 vectorstore.save_local(save_path)
-print(f"✅ Vector store saved at {save_path}")
+print(f"Vector store saved at {save_path}")

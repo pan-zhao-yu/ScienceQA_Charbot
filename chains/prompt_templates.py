@@ -26,3 +26,6 @@ Question:
 {question}
 
 Answer (explain clearly and give the final answer at the end):"""
+
+
+# def get_prompt_template():
