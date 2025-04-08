@@ -1,0 +1,39 @@
+1. [Question] which of these states is farthest north?[Choices] west virginia, louisiana, arizona, oklahoma
+2. [Question] identify the question that tom and justin's experiment can best answer.[Choices] do ping pong balls stop rolling along the ground sooner after being launched from a 30° angle or a 45° angle?, do ping pong balls travel farther when launched from a 30° angle compared to a 45° angle?
+3. [Question] identify the question that kathleen and bryant's experiment can best answer.[Choices] does kathleen's snowboard slide down a hill in less time when it has a layer of wax or when it does not have a layer of wax?, does kathleen's snowboard slide down a hill in less time when it has a thin layer of wax or a thick layer of wax?
+4. [Question] which tense does the sentence use? mona will print her name with care.[Choices] present tense, future tense, past tense
+5. [Question] complete the sentence. sewing an apron is a ().[Choices] chemical change, physical change
+6. [Question] which of the following contains a vague pronoun reference?[Choices] steven's brother jim wondered whether he ran fast enough to qualify for the boston marathon., steven's brother jim wondered whether steven ran fast enough to qualify for the boston marathon.
+7. [Question] what is the probability that a goat produced by this cross will be homozygous dominant for the myotonia congenita gene?[Choices] 1/4, 0/4, 4/4, 2/4, 3/4
+8. [Question] compare the average kinetic energies of the particles in each sample. which sample has the higher temperature?[Choices] neither; the samples have the same temperature, sample a, sample b
+9. [Question] what do these two changes have in common? tearing a piece of paper breaking a piece of glass[Choices] both are only physical changes., both are chemical changes., both are caused by cooling., both are caused by heating.
+10.[Question] which of these organisms contains matter that was once part of the phytoplankton?[Choices] black rockfish, sea otter
+
+[Question] which solution has a higher concentration of blue particles?[Choices] neither; their concentrations are the same, solution b, solution a
+--------------------------------------------------
+Embedding Content:
+[Question] think about the magnetic force between the magnets in each pair. which of the following statements is true?[Choices] the strength of the magnetic force is the same in both pairs., the magnetic force is stronger in pair 2., the magnetic force is stronger in pair 1.
+--------------------------------------------------
+Embedding Content:
+[Question] what is the volume of a large soup pot?[Choices] 7 liters, 7 milliliters
+--------------------------------------------------
+Embedding Content:
+[Question] what does pollen help a plant do?[Choices] make seeds, grow bigger, grow new leaves
+--------------------------------------------------
+Embedding Content:
+[Question] read the following excerpt from a student essay. how can the writer best improve his or her word choice? when i said that i wanted to take a cooking class, i didn't know what i was getting into. i love cooking, but i'm very shy and hate being in the spotlight. the first time the teacher asked me to do a culinary technique, my hands were sweating profusely. as i held the heavy utility knife in my sweaty hand, it fell to the floor. the class had just started, and i had already made a terrible first impression! my face was red, but i got the knife, put it in the sink, took a clean one, and cut the slab of raw bluefin tuna into paper-thin pieces. everyone in the class—even the instructor—gave me a round of applause.[Choices] by adding technical terms, by using more precise verbs, by using words with more appropriate connotations
+--------------------------------------------------
+Embedding Content:
+[Question] what information supports the conclusion that logan inherited this trait?[Choices] logan's mother has blue eyes. she passed this trait down to logan., logan likes to wear a blue sweater to match his blue eyes.
+--------------------------------------------------
+Embedding Content:
+[Question] which property matches this object?[Choices] flexible, sticky
+--------------------------------------------------
+Embedding Content:
+[Question] what is the capital of south carolina?[Choices] columbia, montgomery, charleston, harrisburg
+--------------------------------------------------
+Embedding Content:
+[Question] is the following trait inherited or acquired? katy plays soccer.[Choices] inherited, acquired
+--------------------------------------------------
+Embedding Content:
+[Question] based on this information, what is holly's phenotype for the whisker type trait?[Choices] straight whiskers, curved whiskers
