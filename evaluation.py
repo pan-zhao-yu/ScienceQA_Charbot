@@ -1,165 +1,171 @@
-import re
 import json
-import logging
-from langchain.chains import RetrievalQA, LLMChain
-from langchain.prompts import PromptTemplate
-from langchain_openai.chat_models import ChatOpenAI
-from langchain_huggingface import HuggingFaceEmbeddings
+from datasets import load_dataset
 from langchain_community.vectorstores import FAISS
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain.chains import RetrievalQA
+from langchain_openai.chat_models import ChatOpenAI
+from langchain.prompts import PromptTemplate
+from chains.prompt_templates import get_prompt_template
+import logging
 
-# 关闭不必要的警告
+# -------------------------------
+# 1. 数据准备：抽取 20 个数据集中的问题
+# -------------------------------
 logging.getLogger("transformers.tokenization_utils_base").setLevel(logging.ERROR)
 
+# 加载 ScienceQA 数据集
+dataset = load_dataset("derek-thomas/ScienceQA")
+train_data = dataset["train"]
 
-# -----------------------------
-# 1. 定义辅助函数
-# -----------------------------
-def normalize_text(text):
-    """
-    归一化文本：移除换行符、多余空格，转换为小写
-    """
-    text = text.replace("\n", " ")
-    text = re.sub(r"\s+", " ", text)
-    return text.strip().lower()
+dataset_questions = []
+# 从数据集中抽取前20个问题
+for idx, example in enumerate(train_data):
+    if idx >= 20:
+        break
+    q = {
+        "id": f"dataset_{idx + 1}",
+        "question": example.get("question", ""),
+        "choices": example.get("choices", []),
+        "source": "dataset"
+    }
+    dataset_questions.append(q)
 
-
-def extract_candidate_answer(answer_text, choices):
-    """
-    从模型输出中提取候选答案：
-    如果输出中包含某个选项（忽略大小写），则返回该选项；
-    否则直接返回经过 strip 的输出（转小写）。
-    """
-    ans_lower = answer_text.lower()
-    for choice in choices:
-        if choice.lower() in ans_lower:
-            return choice.lower()
-    return answer_text.strip().lower()
-
-
-# -----------------------------
-# 2. 定义评估 prompting 模板函数
-# -----------------------------
-def get_prompt_template_evaluation():
-    return (
-        "Context: {context}\n"
-        "You are an evaluation assistant. Your task is to assess the answer provided for a multiple-choice question "
-        "by comparing the candidate answer with the reference answer. Please follow these steps:\n\n"
-        "1. Read the provided question, answer options, candidate answer, and reference answer.\n"
-        "2. Compare the candidate answer with the reference answer. Ignore differences in case and punctuation.\n"
-        "3. Determine if the candidate answer is correct based on its semantic and content similarity to the reference answer.\n"
-        "4. Provide a brief explanation outlining the reasoning behind your evaluation.\n"
-        "5. Finally, output the result in the exact JSON format shown below. Do not include any extra text or commentary.\n\n"
-        "Expected JSON format:\n"
-        "{\n"
-        '  "question": "<question text>",\n'
-        '  "predicted_answer": "<candidate answer>",\n'
-        '  "reference_answer": "<reference answer>",\n'
-        '  "is_correct": <true or false>,\n'
-        '  "explanation": "<brief explanation>"\n'
-        "}\n\n"
-        "Now, evaluate the following information:\n"
-        "Question: {question}\n"
-        "Answer Options: {choices}\n"
-        "Candidate Answer: {candidate_answer}\n"
-        "Reference Answer: {reference_answer}\n\n"
-        "Please return the evaluation result strictly in the JSON format specified above."
-    )
-
-
-# -----------------------------
-# 3. 构建评估链（LLMChain）和检索链（RetrievalQA）
-# -----------------------------
-# 初始化嵌入模型（与 prepare 阶段保持一致）
-embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-
-# 加载本地 FAISS 向量库（请确保 prepare 脚本已生成并保存）
-vectorstore = FAISS.load_local("vectorstore/faiss_index", embeddings=embedding_model,
-                               allow_dangerous_deserialization=True)
-retriever = vectorstore.as_retriever(search_kwargs={"k": 1})
-
-# 构造用于检索的 RAG 链，此处 prompt 要与 prepare 时生成 embedding 时的格式一致
-retrieval_prompt = PromptTemplate(
-    input_variables=["context", "question"],
-    template="Context: {context}\n[Question] {question}"
-)
-rag_chain = RetrievalQA.from_chain_type(
-    llm=ChatOpenAI(model="gpt-4", temperature=0.2, api_key="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"),
-    retriever=retriever,
-    chain_type="stuff",
-    chain_type_kwargs={"prompt": retrieval_prompt}
-)
-
-# 构造评估链，输入变量包括 context、question、choices、candidate_answer、reference_answer
-evaluation_prompt = get_prompt_template_evaluation()
-evaluation_chain = LLMChain(
-    llm=ChatOpenAI(model="gpt-4", temperature=0.2, api_key="YOUR_API_KEY_HERE"),
-    prompt=PromptTemplate(
-        input_variables=["context", "question", "choices", "candidate_answer", "reference_answer"],
-        template=evaluation_prompt
-    )
-)
-
-# -----------------------------
-# 4. 定义测试问题（示例）
-#    如果你有一个 questions.json，也可以加载文件，这里手动定义几个样例问题
-# -----------------------------
-test_questions = [
+# -------------------------------
+# 2. 定义 10 个额外的自选问题（英文）
+# -------------------------------
+custom_questions = [
     {
-        "question": "Is this a sentence fragment? During the construction of Mount Rushmore, approximately eight hundred million pounds of rock from the mountain to create the monument.",
-        "choices": ["no", "yes"],
-        "reference_answer": "yes"
+        "id": "custom_1",
+        "question": "Which part of a map typically indicates the direction of north?",
+        "choices": ["Compass rose", "Scale bar", "Legend", "Graticule"],
+        "source": "custom"
     },
     {
-        "question": "Which of these states is farthest north? West Virginia, Louisiana, Arizona, Oklahoma.",
-        "choices": ["west virginia", "louisiana", "arizona", "oklahoma"],
-        "reference_answer": "west virginia"
+        "id": "custom_2",
+        "question": "How does a compass rose help in reading maps?",
+        "choices": [],
+        "source": "custom"
+    },
+    {
+        "id": "custom_3",
+        "question": "Why might experiments use a control group?",
+        "choices": [],
+        "source": "custom"
+    },
+    {
+        "id": "custom_4",
+        "question": "Which element is not typically found on a traditional map?",
+        "choices": ["North arrow", "Legend", "Compass", "GPS coordinates"],
+        "source": "custom"
+    },
+    {
+        "id": "custom_5",
+        "question": "Describe the importance of consistent orientation in map reading.",
+        "choices": [],
+        "source": "custom"
+    },
+    {
+        "id": "custom_6",
+        "question": "What is one advantage of using multiple data chunks for embedding in a vector database?",
+        "choices": [],
+        "source": "custom"
+    },
+    {
+        "id": "custom_7",
+        "question": "Identify the benefit of using a chain-of-thought approach when answering complex questions.",
+        "choices": [],
+        "source": "custom"
+    },
+    {
+        "id": "custom_8",
+        "question": "Which factor is least likely to affect plant growth in a controlled experiment?",
+        "choices": ["Soil type", "Watering schedule", "Ambient noise", "Light exposure"],
+        "source": "custom"
+    },
+    {
+        "id": "custom_9",
+        "question": "Explain how artificial intelligence can enhance scientific inquiry.",
+        "choices": [],
+        "source": "custom"
+    },
+    {
+        "id": "custom_10",
+        "question": "Discuss the role of context in retrieving relevant information from a knowledge base.",
+        "choices": [],
+        "source": "custom"
     }
-    # 可继续添加其他测试问题...
 ]
 
-# -----------------------------
-# 5. 对每个测试问题进行评估
-# -----------------------------
-correct_count = 0
-total = len(test_questions)
+# -------------------------------
+# 3. 合并问题列表并生成 JSON 文件
+# -------------------------------
+all_questions = dataset_questions + custom_questions
 
-for entry in test_questions:
-    raw_question = entry["question"]
-    choices = entry["choices"]
-    reference_answer = normalize_text(entry["reference_answer"])
+# 保存问题到 evaluation_questions.json
+with open("evaluation_questions.json", "w", encoding="utf-8") as f:
+    json.dump(all_questions, f, ensure_ascii=False, indent=4)
+print("Evaluation questions saved to evaluation_questions.json")
 
-    # 构造查询时，保证格式与 prepare 时一致： "[Question] <question>\n[Choices] <choice1, choice2,...>"
-    norm_question = normalize_text(raw_question)
-    norm_choices = [normalize_text(choice) for choice in choices]
-    query = f"[Question] {norm_question}\n[Choices] {', '.join(norm_choices)}"
+# -------------------------------
+# 4. 初始化向量库及问答链
+# -------------------------------
+# 使用与 prepare.py 中相同的嵌入模型
+embedding = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+# 从本地加载之前构建好的 FAISS 向量库
+vectorstore = FAISS.load_local("vectorstore/faiss_index", embeddings=embedding, allow_dangerous_deserialization=True)
+retriever = vectorstore.as_retriever(search_kwargs={"k": 2})
 
-    # 检索上下文（可帮助 LLM 评估时理解当前任务）
-    retrieved_docs = retriever.get_relevant_documents(query)
-    context_text = "\n".join([doc.metadata.get("full_content", doc.page_content) for doc in retrieved_docs])
+# 请确保替换下面 API Key 为有效值
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2, api_key="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")
 
-    # 调用 RAG 检索链获取模型候选答案
-    candidate_result = rag_chain.invoke(query)
-    # 这里假设返回结果以字典格式存在 "result" 字段，否则直接使用返回的字符串
-    candidate_answer_text = candidate_result.get("result", candidate_result).strip()
-    candidate_answer = extract_candidate_answer(candidate_answer_text, norm_choices)
+# 定义问答提示模板（使用之前定义的模板）
+prompt = PromptTemplate(
+    input_variables=["context", "question"],
+    template=get_prompt_template()
+)
 
-    # 使用评估链对比候选答案与参考答案，传入检索得到的上下文
-    eval_input = {
-        "context": context_text,
-        "question": raw_question,
-        "choices": ", ".join(choices),
-        "candidate_answer": candidate_answer,
-        "reference_answer": reference_answer
+# 构建 Retrieval-Augmented Generation (RAG) 问答链
+rag_chain = RetrievalQA.from_chain_type(
+    llm=llm,
+    retriever=retriever,
+    chain_type="stuff",
+    chain_type_kwargs={"prompt": prompt}
+)
+
+# -------------------------------
+# 5. 循环提问，并收集模型的回答
+# -------------------------------
+evaluation_results = []
+for q in all_questions:
+    question_text = q["question"]
+    try:
+        # 可选：获得检索的文档上下文（用于调试或后续分析）
+        retrieved_docs = retriever.get_relevant_documents(question_text)
+        # 使用 RAG Chain 得到答案
+        answer = rag_chain.invoke(question_text)
+        # 处理回答格式：可能是字典（包含 "result" 键）、对象或字符串
+        if isinstance(answer, dict) and "result" in answer:
+            answer_text = answer["result"]
+        elif hasattr(answer, "content"):
+            answer_text = answer.content
+        else:
+            answer_text = str(answer)
+    except Exception as e:
+        answer_text = f"Error: {e}"
+
+    result = {
+        "id": q["id"],
+        "source": q["source"],
+        "question": question_text,
+        "choices": q["choices"],
+        "model_answer": answer_text
     }
-    eval_output = evaluation_chain.run(eval_input)
+    evaluation_results.append(result)
+    print(f"Processed question {q['id']}")
 
-    print("Evaluation result:")
-    print(eval_output)
-    print("-" * 60)
-
-    # 这里为了统计准确率，采用简单的字符串比较（注意对大小写已归一化）
-    if candidate_answer == reference_answer:
-        correct_count += 1
-
-accuracy = correct_count / total if total > 0 else 0
-print(f"Overall Accuracy: {accuracy * 100:.2f}%")
+# -------------------------------
+# 6. 保存提问及答案结果到 evaluation_4omini_defaultPrompt_results.json
+# -------------------------------
+with open("evaluation_results.json", "w", encoding="utf-8") as f:
+    json.dump(evaluation_results, f, ensure_ascii=False, indent=4)
+print("Evaluation results saved to evaluation_results.json")

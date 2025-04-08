@@ -1,0 +1,272 @@
+[
+    {
+        "id": "dataset_1",
+        "question": "Which of these states is farthest north?",
+        "choices": [
+            "West Virginia",
+            "Louisiana",
+            "Arizona",
+            "Oklahoma"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_2",
+        "question": "Identify the question that Tom and Justin's experiment can best answer.",
+        "choices": [
+            "Do ping pong balls stop rolling along the ground sooner after being launched from a 30° angle or a 45° angle?",
+            "Do ping pong balls travel farther when launched from a 30° angle compared to a 45° angle?"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_3",
+        "question": "Identify the question that Kathleen and Bryant's experiment can best answer.",
+        "choices": [
+            "Does Kathleen's snowboard slide down a hill in less time when it has a layer of wax or when it does not have a layer of wax?",
+            "Does Kathleen's snowboard slide down a hill in less time when it has a thin layer of wax or a thick layer of wax?"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_4",
+        "question": "Which tense does the sentence use?\nMona will print her name with care.",
+        "choices": [
+            "present tense",
+            "future tense",
+            "past tense"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_5",
+        "question": "Complete the sentence.\nSewing an apron is a ().",
+        "choices": [
+            "chemical change",
+            "physical change"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_6",
+        "question": "Which of the following contains a vague pronoun reference?",
+        "choices": [
+            "Steven's brother Jim wondered whether he ran fast enough to qualify for the Boston Marathon.",
+            "Steven's brother Jim wondered whether Steven ran fast enough to qualify for the Boston Marathon."
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_7",
+        "question": "What is the probability that a goat produced by this cross will be homozygous dominant for the myotonia congenita gene?",
+        "choices": [
+            "1/4",
+            "0/4",
+            "4/4",
+            "2/4",
+            "3/4"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_8",
+        "question": "Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?",
+        "choices": [
+            "neither; the samples have the same temperature",
+            "sample A",
+            "sample B"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_9",
+        "question": "What do these two changes have in common?\ntearing a piece of paper\nbreaking a piece of glass",
+        "choices": [
+            "Both are only physical changes.",
+            "Both are chemical changes.",
+            "Both are caused by cooling.",
+            "Both are caused by heating."
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_10",
+        "question": "Which of these organisms contains matter that was once part of the phytoplankton?",
+        "choices": [
+            "black rockfish",
+            "sea otter"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_11",
+        "question": "Which solution has a higher concentration of blue particles?",
+        "choices": [
+            "neither; their concentrations are the same",
+            "Solution B",
+            "Solution A"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_12",
+        "question": "Think about the magnetic force between the magnets in each pair. Which of the following statements is true?",
+        "choices": [
+            "The strength of the magnetic force is the same in both pairs.",
+            "The magnetic force is stronger in Pair 2.",
+            "The magnetic force is stronger in Pair 1."
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_13",
+        "question": "What is the volume of a large soup pot?",
+        "choices": [
+            "7 liters",
+            "7 milliliters"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_14",
+        "question": "What does pollen help a plant do?",
+        "choices": [
+            "make seeds",
+            "grow bigger",
+            "grow new leaves"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_15",
+        "question": "Read the following excerpt from a student essay. How can the writer best improve his or her word choice?\nWhen I said that I wanted to take a cooking class, I didn't know what I was getting into. I love cooking, but I'm very shy and hate being in the spotlight. The first time the teacher asked me to do a culinary technique, my hands were sweating profusely. As I held the heavy utility knife in my sweaty hand, it fell to the floor. The class had just started, and I had already made a terrible first impression! My face was red, but I got the knife, put it in the sink, took a clean one, and cut the slab of raw bluefin tuna into paper-thin pieces. Everyone in the class—even the instructor—gave me a round of applause.",
+        "choices": [
+            "by adding technical terms",
+            "by using more precise verbs",
+            "by using words with more appropriate connotations"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_16",
+        "question": "What information supports the conclusion that Logan inherited this trait?",
+        "choices": [
+            "Logan's mother has blue eyes. She passed this trait down to Logan.",
+            "Logan likes to wear a blue sweater to match his blue eyes."
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_17",
+        "question": "Which property matches this object?",
+        "choices": [
+            "flexible",
+            "sticky"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_18",
+        "question": "What is the capital of South Carolina?",
+        "choices": [
+            "Columbia",
+            "Montgomery",
+            "Charleston",
+            "Harrisburg"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_19",
+        "question": "Is the following trait inherited or acquired?\nKaty plays soccer.",
+        "choices": [
+            "inherited",
+            "acquired"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "dataset_20",
+        "question": "Based on this information, what is Holly's phenotype for the whisker type trait?",
+        "choices": [
+            "straight whiskers",
+            "curved whiskers"
+        ],
+        "source": "dataset"
+    },
+    {
+        "id": "custom_1",
+        "question": "Which part of a map typically indicates the direction of north?",
+        "choices": [
+            "Compass rose",
+            "Scale bar",
+            "Legend",
+            "Graticule"
+        ],
+        "source": "custom"
+    },
+    {
+        "id": "custom_2",
+        "question": "How does a compass rose help in reading maps?",
+        "choices": [],
+        "source": "custom"
+    },
+    {
+        "id": "custom_3",
+        "question": "Why might experiments use a control group?",
+        "choices": [],
+        "source": "custom"
+    },
+    {
+        "id": "custom_4",
+        "question": "Which element is not typically found on a traditional map?",
+        "choices": [
+            "North arrow",
+            "Legend",
+            "Compass",
+            "GPS coordinates"
+        ],
+        "source": "custom"
+    },
+    {
+        "id": "custom_5",
+        "question": "Describe the importance of consistent orientation in map reading.",
+        "choices": [],
+        "source": "custom"
+    },
+    {
+        "id": "custom_6",
+        "question": "What is one advantage of using multiple data chunks for embedding in a vector database?",
+        "choices": [],
+        "source": "custom"
+    },
+    {
+        "id": "custom_7",
+        "question": "Identify the benefit of using a chain-of-thought approach when answering complex questions.",
+        "choices": [],
+        "source": "custom"
+    },
+    {
+        "id": "custom_8",
+        "question": "Which factor is least likely to affect plant growth in a controlled experiment?",
+        "choices": [
+            "Soil type",
+            "Watering schedule",
+            "Ambient noise",
+            "Light exposure"
+        ],
+        "source": "custom"
+    },
+    {
+        "id": "custom_9",
+        "question": "Explain how artificial intelligence can enhance scientific inquiry.",
+        "choices": [],
+        "source": "custom"
+    },
+    {
+        "id": "custom_10",
+        "question": "Discuss the role of context in retrieving relevant information from a knowledge base.",
+        "choices": [],
+        "source": "custom"
+    }
+]

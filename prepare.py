@@ -7,18 +7,19 @@ from tqdm import tqdm
 import os
 import shutil
 
-os.environ["TOKENIZERS_PARALLELISM"] = "false" #停止一些不必要的警告
-# 加载数据（字典结构，train split 是 dict 的 values）
+# 停止部分不必要的警告
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+# 加载 ScienceQA 数据集
 dataset = load_dataset("derek-thomas/ScienceQA")
 train_data = dataset["train"]
 print(f"📦 Loaded {len(train_data)} training examples")
 
-# 构建 LangChain Documents
+# 构建 LangChain 文档
 documents = []
 for example in tqdm(train_data):
-    question = example.get("question", "").replace("\n", " ").strip().lower()
-    choices = [c.replace("\n", " ").strip().lower() for c in example.get("choices", [])]
-    answer = example.get("answer", "")
+    question = example.get("question", "")
+    choices = example.get("choices", [])
     lecture = example.get("lecture", "")
     hint = example.get("hint", "")
     solution = example.get("solution", "")
@@ -27,62 +28,62 @@ for example in tqdm(train_data):
     skill = example.get("skill", "")
     category = example.get("category", "")
     task_type = example.get("task", "")
+    answer_index = example.get("answer", None)
+    image = example.get("image", "")
 
-    # 仅用于embedding的内容，只包含question和choices
-    embedding_content = f"[Question] {question}[Choices] {', '.join(choices)}"
+    # 构造更加结构化、详细的文档内容，这样能保证嵌入时覆盖更全面的信息
+    content = f"""
+【Subject】: {subject}    【Topic】: {topic}    【Skill】: {skill}    【Category】: {category}
+【Task】: {task_type}    【Answer Index】: {answer_index}
+-------------------------------
+[Question]
+{question}
 
-    # 完整信息存入metadata中
-    full_content = f"""
-[Question] {question}
-[Choices] {', '.join(choices)}
-[Answer] {answer}
-[Lecture] {lecture}
-[Hint] {hint}
-[Solution] {solution}
-[Category] {category} | Subject: {subject} | Topic: {topic} | Skill: {skill}
+[Choices]
+{', '.join(choices)}
+
+-------------------------------
+[Lecture]
+{lecture}
+
+-------------------------------
+[Hint]
+{hint}
+
+-------------------------------
+[Solution]
+{solution}
     """.strip()
 
+    # 增加 metadata 信息以便后续检索或辅助筛选
     metadata = {
-        "full_content": full_content,
         "subject": subject,
         "topic": topic,
         "skill": skill,
         "task": task_type,
         "category": category,
+        "answer": answer_index,
+        "image": image,
     }
 
-    documents.append(Document(page_content=embedding_content, metadata=metadata))
+    documents.append(Document(page_content=content, metadata=metadata))
 
-#Chunking 分块文本（按需修改参数）
-splitter = RecursiveCharacterTextSplitter(chunk_size=10000, chunk_overlap=0) #one doc per chunk
+# 使用较小的 chunk_size 以及适当增加 chunk_overlap 来确保每个 chunk 内能保留完整的上下文信息
+splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 split_docs = splitter.split_documents(documents)
 print(f"✂️ Split into {len(split_docs)} chunks")
 
-# 嵌入模型（本地）
+# 初始化本地嵌入模型（使用 HuggingFace 的 sentence-transformers 模型）
 embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
-
-# 输出前5个文档的 embedding content 和对应的 embedding 向量
-print("embedding 文档及其向量：")
-for doc in split_docs[:20]:
-    # 这里调用 embed_query 生成向量（注意输入必须与构造时一致）
-    vector = embedding_model.embed_query(doc.page_content)
-    print("Embedding Content:")
-    print(doc.page_content)
-    # print("Embedding Vector:")
-    # print(vector)
-    print("-" * 50)
-
-
-# 清理已有路径
+# 清理已有的向量库文件夹
 save_path = "vectorstore/faiss_index"
 if os.path.isfile(save_path):
     os.remove(save_path)
 if os.path.isdir(save_path):
     shutil.rmtree(save_path)
 
-
-# 构建 FAISS 向量库
+# 使用 FAISS 构建向量库
 vectorstore = FAISS.from_documents(split_docs, embedding_model)
 print("FAISS vectorstore created")
 

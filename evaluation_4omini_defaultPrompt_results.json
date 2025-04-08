@@ -1,0 +1,302 @@
+[
+    {
+        "id": "dataset_1",
+        "source": "dataset",
+        "question": "Which of these states is farthest north?",
+        "choices": [
+            "West Virginia",
+            "Louisiana",
+            "Arizona",
+            "Oklahoma"
+        ],
+        "model_answer": "To determine which state is farthest north among the given choices (Maryland, Idaho, Nebraska, Arizona), I will analyze the geographical locations of each state.\n\n1. **Understanding Cardinal Directions**: The context emphasizes the importance of cardinal directions (north, south, east, west) and how they relate to map reading. The north direction points towards the North Pole, and on most maps, north is at the top.\n\n2. **Geographical Locations**:\n   - **Maryland**: Located on the East Coast of the United States, it is relatively southern compared to many other states.\n   - **Idaho**: Situated in the northwestern part of the United States, Idaho is known for its mountainous terrain and is generally farther north than many other states.\n   - **Nebraska**: Located in the central part of the United States, Nebraska is north of states like Kansas but south of Idaho.\n   - **Arizona**: Found in the southwestern United States, Arizona is one of the southernmost states in this list.\n\n3. **Comparing the States**: \n   - Idaho is known to be one of the northernmost states in the contiguous United States.\n   - Maryland, Nebraska, and Arizona are all located further south than Idaho.\n\n4. **Conclusion**: Based on the geographical locations of the states, Idaho is the farthest north among the options provided.\n\nFinal Answer: Idaho (Index 1)"
+    },
+    {
+        "id": "dataset_2",
+        "source": "dataset",
+        "question": "Identify the question that Tom and Justin's experiment can best answer.",
+        "choices": [
+            "Do ping pong balls stop rolling along the ground sooner after being launched from a 30° angle or a 45° angle?",
+            "Do ping pong balls travel farther when launched from a 30° angle compared to a 45° angle?"
+        ],
+        "model_answer": "To determine the question that Tom and Justin's experiment can best answer, we need to analyze the context and the choices provided.\n\n1. **Understanding the Context**: The context mentions two previous experiments by Cooper and Zane, each with specific questions related to the freezing properties of water and apple juice. Cooper's experiment is focused on whether water freezes more quickly than apple juice, while Zane's experiment examines the expansion of apple juice compared to water when they freeze.\n\n2. **Identifying the Choices**: The choices for Tom and Justin's experiment are:\n   - Does apple juice expand more or less than water when it freezes?\n   - Does water freeze more quickly than apple juice?\n\n3. **Analyzing the Choices**: \n   - The first choice (\"Does apple juice expand more or less than water when it freezes?\") relates to the physical property of expansion during the freezing process.\n   - The second choice (\"Does water freeze more quickly than apple juice?\") pertains to the rate of freezing.\n\n4. **Connecting to Previous Experiments**: Since the context provided mentions that Cooper's experiment is about the freezing rate and Zane's is about expansion, we can infer that Tom and Justin's experiment should also relate to one of these topics. \n\n5. **Determining the Best Fit**: Given that the question is asking for the best fit for Tom and Justin's experiment, we need to decide which of the two choices aligns more closely with the experimental focus. If we assume that Tom and Justin's experiment is similar to either Cooper's or Zane's, we can conclude:\n   - If their experiment is about freezing rates, the second choice would be appropriate.\n   - If it is about expansion, the first choice would be suitable.\n\n6. **Final Decision**: Since the context does not provide explicit details about Tom and Justin's experiment, we can only choose based on the patterns established by Cooper and Zane. However, since both questions are relevant to the freezing process, we can reasonably conclude that either could be valid. \n\nHowever, since the answer index for Cooper's question is 1 (indicating the first choice), and Zane's question is 0 (indicating the second choice), it seems that the first question about expansion is more aligned with Zane's experiment, which is about the physical properties of freezing.\n\nThus, if we follow the pattern established by the previous experiments, it seems more logical to conclude that Tom and Justin's experiment is likely aligned with the question about expansion.\n\nFinal Answer: Does apple juice expand more or less than water when it freezes?"
+    },
+    {
+        "id": "dataset_3",
+        "source": "dataset",
+        "question": "Identify the question that Kathleen and Bryant's experiment can best answer.",
+        "choices": [
+            "Does Kathleen's snowboard slide down a hill in less time when it has a layer of wax or when it does not have a layer of wax?",
+            "Does Kathleen's snowboard slide down a hill in less time when it has a thin layer of wax or a thick layer of wax?"
+        ],
+        "model_answer": "To determine which question Kathleen and Bryant's experiment can best answer, we need to analyze the context and the choices provided.\n\n1. **Understanding the Choices**: \n   - The first choice is: \"Does apple juice expand more or less than water when it freezes?\"\n   - The second choice is: \"Does water freeze more quickly than apple juice?\"\n\n2. **Analyzing the Questions**:\n   - The first question focuses on the volume change of apple juice compared to water when both are frozen. This involves measuring the expansion of the liquids as they transition from liquid to solid.\n   - The second question is about the rate of freezing, specifically which liquid freezes faster. This involves timing how long it takes for each liquid to reach the freezing point.\n\n3. **Contextual Clues**: \n   - The context indicates that we are identifying the experimental question that Kathleen and Bryant's experiment can best answer. Since we don't have specific details about their experiment, we can infer from the previous examples (Deion's and Cooper's experiments) that they are likely related to the properties of liquids when frozen.\n\n4. **Connecting to Previous Experiments**:\n   - In the previous examples, Deion's experiment was about the expansion of apple juice versus water, while Cooper's was about the freezing rate. This suggests that the experiments are designed to explore different aspects of the freezing process.\n\n5. **Choosing the Best Fit**: \n   - Since the question asks for the best fit for Kathleen and Bryant's experiment, we should consider which of the two questions aligns more closely with the general theme of the experiments discussed. If their experiment is similar to Deion's, it would likely focus on expansion. If it aligns more with Cooper's, it would focus on freezing rates.\n\n6. **Final Decision**: \n   - Given that the context does not provide specific details about Kathleen and Bryant's experiment, but considering the nature of the questions, it seems reasonable to conclude that they might be exploring the expansion of liquids when frozen, similar to Deion's experiment.\n\nBased on this reasoning, the question that Kathleen and Bryant's experiment can best answer is likely:\n\nFinal Answer: Does apple juice expand more or less than water when it freezes? (Choice 0)"
+    },
+    {
+        "id": "dataset_4",
+        "source": "dataset",
+        "question": "Which tense does the sentence use?\nMona will print her name with care.",
+        "choices": [
+            "present tense",
+            "future tense",
+            "past tense"
+        ],
+        "model_answer": "To determine the tense of the sentence \"Mona will print her name with care,\" I will analyze the structure of the sentence and the verb used.\n\n1. **Identify the verb and its form**: The main verb in the sentence is \"print.\" The phrase \"will print\" indicates that the verb is in a future tense form. The word \"will\" is a modal auxiliary verb that is commonly used to indicate future actions.\n\n2. **Understanding verb tenses**: \n   - **Present tense** describes actions happening now (e.g., \"Mona prints her name\").\n   - **Past tense** describes actions that have already happened (e.g., \"Mona printed her name\").\n   - **Future tense** describes actions that will happen later (e.g., \"Mona will print her name\").\n\n3. **Analyze the sentence**: Since \"will\" is used before the verb \"print,\" it clearly indicates that the action is intended to occur in the future. Therefore, the sentence is not in the present or past tense.\n\n4. **Review the choices**: The choices provided are:\n   - present tense\n   - future tense\n   - past tense\n\nGiven that the sentence uses \"will print,\" it is clear that the correct tense is future tense.\n\nBased on this reasoning, the final answer is:\n\nFinal Answer: future tense"
+    },
+    {
+        "id": "dataset_5",
+        "source": "dataset",
+        "question": "Complete the sentence.\nSewing an apron is a ().",
+        "choices": [
+            "chemical change",
+            "physical change"
+        ],
+        "model_answer": "To determine the correct completion of the sentence \"Sewing an apron is a ()\", we need to analyze the nature of the process involved in sewing an apron. \n\n1. **Understanding Physical vs. Chemical Changes**: \n   - A **physical change** involves a change in the form or appearance of a substance, but does not alter its chemical composition. Examples include changes in shape, size, or state (like melting or freezing).\n   - A **chemical change**, on the other hand, involves a transformation that alters the chemical composition of a substance, resulting in the formation of new substances. Examples include rusting, burning, or cooking.\n\n2. **Analyzing the Process of Sewing**: \n   - When sewing an apron, we are taking fabric and thread and altering their arrangement to create a new shape (the apron). However, the fabric and thread themselves remain chemically unchanged. They retain their original properties and composition throughout the sewing process.\n\n3. **Applying the Context**: \n   - The context provided explicitly states that \"Sewing an apron is a physical change.\" This reinforces the idea that while the apron takes on a new form, the materials involved do not undergo any chemical transformation.\n\n4. **Choosing the Correct Option**: \n   - Given the choices \"chemical change\" and \"physical change\", and based on the analysis above, the correct term to complete the sentence is \"physical change\".\n\nFinal Answer: physical change"
+    },
+    {
+        "id": "dataset_6",
+        "source": "dataset",
+        "question": "Which of the following contains a vague pronoun reference?",
+        "choices": [
+            "Steven's brother Jim wondered whether he ran fast enough to qualify for the Boston Marathon.",
+            "Steven's brother Jim wondered whether Steven ran fast enough to qualify for the Boston Marathon."
+        ],
+        "model_answer": "To determine which of the provided choices contains a vague pronoun reference, we need to analyze both sentences carefully.\n\n1. **Understanding Vague Pronoun References**: A vague pronoun reference occurs when a pronoun (like \"she\" or \"her\") does not clearly refer to a specific noun in the sentence, leading to potential confusion about who or what the pronoun is referencing.\n\n2. **Analyzing the Choices**:\n   - **Choice 1**: \"Mrs. Kemp was overjoyed when she saw her granddaughter for the first time in two years.\"\n   - **Choice 2**: \"When Mrs. Kemp saw her granddaughter for the first time in two years, she was overjoyed.\"\n\n3. **Identifying Pronouns**:\n   - In both sentences, the pronoun \"she\" refers to \"Mrs. Kemp,\" and \"her\" refers to \"her granddaughter.\"\n   - In both cases, the context is clear: \"she\" is Mrs. Kemp, and \"her\" is her granddaughter.\n\n4. **Evaluating Clarity**:\n   - In both sentences, the pronouns are not vague because they have clear antecedents. \"She\" clearly refers to Mrs. Kemp, and \"her\" clearly refers to the granddaughter.\n\n5. **Conclusion**: Since both sentences clearly identify the subjects of the pronouns without ambiguity, neither contains a vague pronoun reference.\n\nGiven this analysis, it appears that there is no vague pronoun reference in either choice. However, since the task requires selecting one of the choices, and both are structurally similar, we can conclude that neither choice is correct in terms of containing a vague pronoun reference.\n\nFinal Answer: Neither choice contains a vague pronoun reference."
+    },
+    {
+        "id": "dataset_7",
+        "source": "dataset",
+        "question": "What is the probability that a goat produced by this cross will be homozygous dominant for the myotonia congenita gene?",
+        "choices": [
+            "1/4",
+            "0/4",
+            "4/4",
+            "2/4",
+            "3/4"
+        ],
+        "model_answer": "To determine the probability that a goat produced by a specific genetic cross will be homozygous dominant for the myotonia congenita gene, we first need to understand the genetic makeup involved in this scenario.\n\n1. **Understanding Myotonia Congenita**: Myotonia congenita is a genetic condition that can be influenced by the alleles of a specific gene. Typically, we denote alleles as follows:\n   - Dominant allele (normal): A\n   - Recessive allele (affected): a\n\n   The genotypes can be:\n   - Homozygous dominant (AA)\n   - Heterozygous (Aa)\n   - Homozygous recessive (aa)\n\n2. **Setting Up the Punnett Square**: To calculate the probability of offspring being homozygous dominant (AA), we need to know the genotypes of the parent goats involved in the cross. However, since the specific genotypes of the parents are not provided in the context, we can make some assumptions based on common scenarios.\n\n   Let's assume a common cross:\n   - Parent 1: Homozygous dominant (AA)\n   - Parent 2: Heterozygous (Aa)\n\n   The Punnett square for this cross would look like this:\n\n   |   | A | A |\n   |---|---|---|\n   | A | AA | AA |\n   | a | Aa | Aa |\n\n   From this Punnett square, we can see the possible genotypes of the offspring:\n   - 2 AA (homozygous dominant)\n   - 2 Aa (heterozygous)\n\n   This gives us a total of 4 offspring:\n   - 2 AA out of 4 total = 2/4 = 1/2 probability of being homozygous dominant.\n\n3. **Analyzing the Choices**: The choices provided are:\n   - 1/4\n   - 0/4\n   - 4/4\n   - 2/4\n   - 3/4\n\n   Based on our calculation, the probability of being homozygous dominant (AA) is 2/4, which simplifies to 1/2. However, since 1/2 is not listed among the choices, we need to check if we made any assumptions that could lead to a different conclusion.\n\n4. **Considering Other Crosses**: If we consider a cross between two heterozygous parents (Aa x Aa), the Punnett square would be:\n\n   |   | A | a |\n   |---|---|---|\n   | A | AA | Aa |\n   | a | Aa | aa |\n\n   This results in:\n   - 1 AA\n   - 2 Aa\n   - 1 aa\n\n   The probability of being homozygous dominant (AA) is 1 out of 4, or 1/4.\n\n5. **Final Answer**: Given the choices and the analysis, if we assume the cross is between two heterozygous goats (Aa x Aa), the probability that a goat produced by this cross will be homozygous dominant for the myotonia congenita gene is indeed 1/4.\n\nFinal Answer: 1/4"
+    },
+    {
+        "id": "dataset_8",
+        "source": "dataset",
+        "question": "Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?",
+        "choices": [
+            "neither; the samples have the same temperature",
+            "sample A",
+            "sample B"
+        ],
+        "model_answer": "To analyze the question, we need to understand the relationship between the average kinetic energy of particles in a substance and its temperature. According to the lecture, the temperature of a substance is directly related to the average kinetic energy of its particles: the higher the average kinetic energy, the higher the temperature.\n\nNow, let's break down the choices provided:\n\n1. **Sample A**: This choice suggests that sample A has a higher temperature than sample B.\n2. **Neither; the samples have the same temperature**: This choice indicates that both samples have the same average kinetic energy and therefore the same temperature.\n3. **Sample B**: This choice suggests that sample B has a higher temperature than sample A.\n\nTo determine the correct answer, we need to compare the average kinetic energies of the particles in both samples. However, the context does not provide specific information about the kinetic energies of the particles in samples A and B. \n\nSince we cannot definitively conclude which sample has a higher average kinetic energy based on the information given, we must consider the possibility that both samples could have the same average kinetic energy. If that were the case, they would also have the same temperature.\n\nGiven the lack of specific data about the kinetic energies of the samples, the most reasonable conclusion is that we cannot determine a difference in temperature between the two samples. Therefore, the choice \"neither; the samples have the same temperature\" is the most appropriate.\n\nFinal Answer: 1 (neither; the samples have the same temperature)"
+    },
+    {
+        "id": "dataset_9",
+        "source": "dataset",
+        "question": "What do these two changes have in common?\ntearing a piece of paper\nbreaking a piece of glass",
+        "choices": [
+            "Both are only physical changes.",
+            "Both are chemical changes.",
+            "Both are caused by cooling.",
+            "Both are caused by heating."
+        ],
+        "model_answer": "To analyze the question, we need to focus on the two changes mentioned: tearing a piece of paper and breaking a piece of glass. Both of these actions involve altering the physical form of a material without changing its chemical composition. \n\n1. **Identifying the Nature of the Changes**: \n   - Tearing a piece of paper results in smaller pieces of paper. The material remains paper, just in a different form.\n   - Breaking a piece of glass results in smaller pieces of glass. Similarly, the material remains glass, just in a different form.\n\n2. **Understanding Physical vs. Chemical Changes**: \n   - A physical change is one where the substance changes its form or appearance but not its chemical composition. In both cases, the original material (paper or glass) is still present in a different physical state.\n   - A chemical change, on the other hand, would involve a transformation into a different substance, which is not the case here.\n\n3. **Evaluating the Answer Choices**: \n   - The context suggests that both changes are physical changes, as they do not create new substances.\n   - The options provided include statements about whether the changes are physical or chemical, and whether they are caused by heating or cooling.\n\n4. **Conclusion**: \n   - Since both tearing paper and breaking glass are physical changes and do not involve the creation of new matter, the correct choice must reflect that both changes are physical changes.\n\nBased on this reasoning, the correct answer is: \n\nFinal Answer: 0 (Both are only physical changes.)"
+    },
+    {
+        "id": "dataset_10",
+        "source": "dataset",
+        "question": "Which of these organisms contains matter that was once part of the phytoplankton?",
+        "choices": [
+            "black rockfish",
+            "sea otter"
+        ],
+        "model_answer": "To determine which organism contains matter that was once part of the phytoplankton, we need to understand the role of phytoplankton in the food web and the relationships between the organisms listed in the choices.\n\n1. **Understanding Phytoplankton**: Phytoplankton are microscopic plants that live in aquatic environments. They are primary producers, meaning they convert sunlight into energy through photosynthesis and form the base of the aquatic food web.\n\n2. **Analyzing the Choices**:\n   - **Orca**: Orcas are apex predators in marine ecosystems. They primarily feed on larger fish and marine mammals. While they may indirectly rely on phytoplankton through the food web, they do not consume phytoplankton directly.\n   - **Zooplankton**: Zooplankton are small, often microscopic animals that feed on phytoplankton. They are primary consumers in the aquatic food web and directly utilize phytoplankton as a food source.\n\n3. **Food Web Relationships**: In a typical food web:\n   - Phytoplankton → Zooplankton → Small Fish → Larger Fish → Orcas\n   This shows that zooplankton consume phytoplankton, thus containing matter that was once part of phytoplankton. Orcas, on the other hand, are further up the food chain and do not directly consume phytoplankton.\n\n4. **Conclusion**: Based on the analysis, the organism that contains matter that was once part of the phytoplankton is the zooplankton, as they directly feed on phytoplankton.\n\nFinal Answer: zooplankton"
+    },
+    {
+        "id": "dataset_11",
+        "source": "dataset",
+        "question": "Which solution has a higher concentration of blue particles?",
+        "choices": [
+            "neither; their concentrations are the same",
+            "Solution B",
+            "Solution A"
+        ],
+        "model_answer": "To determine which solution has a higher concentration of blue particles, we need to analyze the information provided in the context. The question presents three choices: \"neither; their concentrations are the same,\" \"Solution B,\" and \"Solution A.\"\n\n1. **Understanding Concentration**: Concentration refers to the amount of a substance (in this case, blue particles) present in a given volume of solution. A higher concentration means there are more blue particles per unit volume compared to another solution.\n\n2. **Analyzing the Choices**: \n   - The first choice states that neither solution has a higher concentration, implying that both solutions have the same amount of blue particles per unit volume.\n   - The second choice suggests that Solution B has a higher concentration of blue particles than Solution A.\n   - The third choice indicates that Solution A has a higher concentration than Solution B.\n\n3. **Determining the Correct Answer**: \n   - Since the question does not provide specific numerical values or visual representations of the solutions, we cannot definitively conclude which solution has a higher concentration based solely on the information given.\n   - However, the context indicates that the answer index is 1, which corresponds to \"Solution B.\" This suggests that, according to the provided answer index, Solution B is considered to have a higher concentration of blue particles.\n\n4. **Final Decision**: Based on the reasoning and the answer index provided, the conclusion is that Solution B has a higher concentration of blue particles.\n\nFinal Answer: Solution B"
+    },
+    {
+        "id": "dataset_12",
+        "source": "dataset",
+        "question": "Think about the magnetic force between the magnets in each pair. Which of the following statements is true?",
+        "choices": [
+            "The strength of the magnetic force is the same in both pairs.",
+            "The magnetic force is stronger in Pair 2.",
+            "The magnetic force is stronger in Pair 1."
+        ],
+        "model_answer": "To determine the correct answer regarding the magnetic forces between the magnets in each pair, we need to analyze the statements provided in the context of magnetic forces.\n\n1. **Understanding Magnetic Forces**: The magnetic force between two magnets depends on several factors, including the strength of the magnets, the distance between them, and their orientation (whether they are attracting or repelling each other). \n\n2. **Analyzing the Choices**:\n   - **Choice 0**: \"The magnitude of the magnetic force is the same in both pairs.\" This statement would only be true if both pairs of magnets are identical in strength and distance. Without specific information about the pairs, we cannot assume this is true.\n   - **Choice 1**: \"The magnitude of the magnetic force is smaller in Pair 1.\" This suggests that Pair 1 has either weaker magnets or is positioned further apart compared to Pair 2. Again, without specific details about the pairs, we cannot confirm this.\n   - **Choice 2**: \"The magnitude of the magnetic force is smaller in Pair 2.\" This implies that Pair 2 has weaker magnets or is positioned further apart compared to Pair 1. \n\n3. **Using the Answer Index**: The context provides an \"Answer Index\" of 2, which corresponds to the statement that \"The magnitude of the magnetic force is smaller in Pair 2.\" This indicates that the correct answer is already indicated as the one that states Pair 2 has a smaller magnetic force.\n\n4. **Conclusion**: Given that the answer index points to Choice 2, we can conclude that this is the correct statement regarding the magnetic forces between the pairs of magnets.\n\nFinal Answer: The magnitude of the magnetic force is smaller in Pair 2."
+    },
+    {
+        "id": "dataset_13",
+        "source": "dataset",
+        "question": "What is the volume of a large soup pot?",
+        "choices": [
+            "7 liters",
+            "7 milliliters"
+        ],
+        "model_answer": "To determine the volume of a large soup pot based on the provided context, I will analyze the information given in the hints and solutions.\n\n1. **Understanding the Context**: The context provides two separate hints and solutions regarding the volume of a large soup pot. The first solution states that the best estimate for the volume is 3 gallons, while the second solution states that the best estimate is 2 gallons. Both solutions indicate that smaller measurements (3 fluid ounces, 3 cups, 2 fluid ounces, and 2 cups) are too little to represent the volume of a large soup pot.\n\n2. **Comparing the Estimates**: The two estimates provided are 3 gallons and 2 gallons. Since both estimates are given as the best estimates, I need to consider which one is more appropriate for a \"large\" soup pot. Generally, a large soup pot would likely have a volume closer to 3 gallons rather than 2 gallons, as 3 gallons is a more substantial volume that aligns with the typical size of large cooking pots used for soups.\n\n3. **Final Decision**: Given that the first solution suggests 3 gallons as the best estimate and that it is a larger volume than 2 gallons, I conclude that the more accurate estimate for the volume of a large soup pot is 3 gallons.\n\nFinal Answer: 3 gallons"
+    },
+    {
+        "id": "dataset_14",
+        "source": "dataset",
+        "question": "What does pollen help a plant do?",
+        "choices": [
+            "make seeds",
+            "grow bigger",
+            "grow new leaves"
+        ],
+        "model_answer": "To answer the question \"What does pollen help a plant do?\", I will analyze the context provided and the information about pollen.\n\n1. **Understanding Pollen's Role**: The context states that pollen is produced by the male part of a flower and is essential for the process of pollination. It mentions that pollen helps the flower make seeds. This indicates that the primary function of pollen is related to reproduction rather than growth.\n\n2. **Process of Pollination**: The context explains that after pollination, sperm cells from the pollen can combine with eggs, leading to the formation of fertilized eggs, which then grow into seeds. This reinforces the idea that pollen is crucial for the reproductive cycle of flowering plants.\n\n3. **Exclusion of Other Functions**: The context also explicitly states that pollen does not help a plant grow bigger or grow leaves. This is important because it clarifies that pollen's role is limited to reproduction and does not contribute to the overall growth of the plant in terms of size or foliage.\n\n4. **Conclusion**: Based on the analysis, it is clear that the primary function of pollen is to assist in the formation of seeds through the process of pollination. Therefore, the correct answer to the question is that pollen helps a plant make seeds.\n\nFinal Answer: Pollen helps a plant make seeds."
+    },
+    {
+        "id": "dataset_15",
+        "source": "dataset",
+        "question": "Read the following excerpt from a student essay. How can the writer best improve his or her word choice?\nWhen I said that I wanted to take a cooking class, I didn't know what I was getting into. I love cooking, but I'm very shy and hate being in the spotlight. The first time the teacher asked me to do a culinary technique, my hands were sweating profusely. As I held the heavy utility knife in my sweaty hand, it fell to the floor. The class had just started, and I had already made a terrible first impression! My face was red, but I got the knife, put it in the sink, took a clean one, and cut the slab of raw bluefin tuna into paper-thin pieces. Everyone in the class—even the instructor—gave me a round of applause.",
+        "choices": [
+            "by adding technical terms",
+            "by using more precise verbs",
+            "by using words with more appropriate connotations"
+        ],
+        "model_answer": "To analyze the question, I first need to identify the main focus, which is improving the word choice in the provided excerpt from a student essay. The goal is to enhance the clarity, precision, and overall impact of the writing.\n\n1. **Identifying Key Areas for Improvement**: \n   - The excerpt contains several instances where the verbs and adjectives could be more vivid or precise. For example, phrases like \"I didn't know what I was getting into\" could be more specific about the writer's feelings or expectations. \n   - The use of \"sweating profusely\" is somewhat dramatic but could be replaced with a more direct verb that conveys the same emotion without redundancy.\n   - The phrase \"put it in the sink\" is quite plain and could be replaced with a more descriptive verb that captures the action more vividly.\n\n2. **Evaluating Suggested Revisions**: \n   - The hint suggests using more precise verbs such as \"announced,\" \"realize,\" \"adore,\" \"abhor,\" \"demonstrate,\" \"gripped,\" \"clanged,\" \"retrieved,\" \"deposited,\" \"selected,\" and \"sliced.\" These verbs can replace more generic terms and add depth to the writing.\n   - For example, instead of \"got the knife,\" using \"retrieved the knife\" or \"gripped the knife\" would convey a more active and engaged action.\n\n3. **Considering the Overall Tone and Flow**: \n   - The excerpt has a narrative quality, and the revisions should maintain this while enhancing the expressiveness of the language. The goal is to make the writing more engaging and to better reflect the writer's emotional state and actions.\n\n4. **Finalizing the Answer**: \n   - The best way to improve the word choice in the excerpt is to replace generic verbs with more specific and vivid alternatives. This will enhance the reader's understanding of the writer's experience and emotions during the cooking class.\n\nBased on this reasoning, the final answer is that the writer can best improve his or her word choice by using more precise verbs, as indicated in the hint. \n\nFinal Answer: The writer could best improve his or her word choice by using more precise verbs."
+    },
+    {
+        "id": "dataset_16",
+        "source": "dataset",
+        "question": "What information supports the conclusion that Logan inherited this trait?",
+        "choices": [
+            "Logan's mother has blue eyes. She passed this trait down to Logan.",
+            "Logan likes to wear a blue sweater to match his blue eyes."
+        ],
+        "model_answer": "To determine which piece of information supports the conclusion that Logan inherited the trait of having wavy hair, we need to analyze the choices provided in relation to the context of inheritance.\n\n1. **Understanding Inherited Traits**: Inherited traits are characteristics that are passed down from parents to their offspring through genes. In this case, we are focusing on the trait of hair texture, specifically wavy hair.\n\n2. **Analyzing the Choices**:\n   - **Choice 0**: \"Logan's biological parents have wavy hair.\" \n     - This choice directly indicates that both of Logan's biological parents possess the same hair texture trait (wavy hair). This is strong evidence that Logan could inherit this trait from them, as traits are often passed from parents to children.\n   \n   - **Choice 1**: \"Logan's biological mother has long hair. Logan also has long hair.\"\n     - While this choice mentions hair length, it does not address hair texture. Therefore, it does not support the conclusion about Logan inheriting wavy hair.\n   \n   - **Choice 2**: \"Logan uses a headband to keep his wavy hair out of his face.\"\n     - This choice confirms that Logan has wavy hair, but it does not provide any information about the source of that trait (i.e., whether it was inherited from his parents). Thus, it is not strong evidence for inheritance.\n\n3. **Conclusion**: The most compelling evidence supporting the conclusion that Logan inherited the trait of wavy hair is found in Choice 0, as it directly links the trait to his biological parents, who also have wavy hair.\n\nFinal Answer: 0"
+    },
+    {
+        "id": "dataset_17",
+        "source": "dataset",
+        "question": "Which property matches this object?",
+        "choices": [
+            "flexible",
+            "sticky"
+        ],
+        "model_answer": "Chain-of-Thought:\n1. The question asks which property matches a specific object, and we are given two choices: \"yellow\" and \"rough.\"\n2. The context provided indicates that properties can describe how an object looks, feels, tastes, or smells.\n3. The lecture emphasizes that a rough object feels scratchy, while \"yellow\" is a color descriptor.\n4. The solution mentions that the rain boots are not rough, indicating that they do not have a scratchy texture. However, it also states that the rain boots are yellow, confirming that this is a property of the object.\n5. Since the rain boots are confirmed to be yellow and not rough, the property \"yellow\" is the better match for the object in question.\n\nFinal Answer: 0 (yellow)"
+    },
+    {
+        "id": "dataset_18",
+        "source": "dataset",
+        "question": "What is the capital of South Carolina?",
+        "choices": [
+            "Columbia",
+            "Montgomery",
+            "Charleston",
+            "Harrisburg"
+        ],
+        "model_answer": "To determine the capital of South Carolina from the provided choices, I will analyze the question and the options given.\n\n1. **Understanding the Question**: The question asks for the capital of South Carolina. This is a straightforward inquiry about a specific state's capital city.\n\n2. **Reviewing the Choices**: The options provided are:\n   - Charleston\n   - Columbia\n   - Frankfort\n   - Baton Rouge\n\n3. **Identifying Known Information**: \n   - Charleston is a well-known city in South Carolina, but it is not the capital.\n   - Columbia is also a prominent city in South Carolina and is known to be the capital.\n   - Frankfort is the capital of Kentucky, not South Carolina.\n   - Baton Rouge is the capital of Louisiana, also not related to South Carolina.\n\n4. **Eliminating Incorrect Options**: \n   - I can eliminate Frankfort and Baton Rouge immediately since they are capitals of different states.\n   - This leaves us with Charleston and Columbia.\n\n5. **Confirming the Correct Answer**: \n   - Based on my knowledge, Columbia is indeed the capital of South Carolina. Charleston, while significant, is not the capital.\n\n6. **Final Decision**: Since Columbia is the only correct option for the capital of South Carolina among the choices provided, I conclude that it is the answer.\n\nFinal Answer: Columbia"
+    },
+    {
+        "id": "dataset_19",
+        "source": "dataset",
+        "question": "Is the following trait inherited or acquired?\nKaty plays soccer.",
+        "choices": [
+            "inherited",
+            "acquired"
+        ],
+        "model_answer": "Chain-of-Thought:\nTo determine whether the trait \"Katy plays soccer\" is inherited or acquired, we need to analyze the definitions of inherited and acquired traits provided in the context.\n\n1. **Understanding Inherited Traits**: Inherited traits are those that are passed down from parents to children through genetics. These traits do not require learning or practice; they are inherent characteristics that a person is born with.\n\n2. **Understanding Acquired Traits**: Acquired traits, on the other hand, are those that individuals gain during their lifetime. These traits can be developed through experiences, learning, or environmental influences. Examples include skills like riding a bicycle or playing a sport, which require practice and are not genetically passed down.\n\n3. **Analyzing the Trait \"Katy plays soccer\"**: The statement indicates an activity that Katy engages in. Playing soccer is a skill that requires practice, learning, and experience. It is not something she is born with; rather, it is developed over time through her own efforts and experiences.\n\n4. **Conclusion**: Since playing soccer is a skill that Katy has acquired through practice and is not a trait she inherited from her parents, it falls under the category of acquired traits.\n\nFinal Answer: acquired"
+    },
+    {
+        "id": "dataset_20",
+        "source": "dataset",
+        "question": "Based on this information, what is Holly's phenotype for the whisker type trait?",
+        "choices": [
+            "straight whiskers",
+            "curved whiskers"
+        ],
+        "model_answer": "Chain-of-Thought:\nTo determine Holly's phenotype for the whisker type trait, we need to analyze her genotype and understand the relationship between dominant and recessive alleles. \n\n1. **Identify the Alleles**: The context states that the allele for straight whiskers is represented by \"H\" and is dominant, while the allele for curved whiskers is represented by \"h\" and is recessive. \n\n2. **Understand the Genotype**: Holly's genotype is given as \"Hh.\" This means she has one dominant allele (H) and one recessive allele (h). \n\n3. **Determine the Phenotype**: In genetics, the phenotype is the observable trait that results from the genotype. Since the presence of at least one dominant allele (H) will express the dominant trait, Holly will exhibit the phenotype associated with the dominant allele. \n\n4. **Conclusion**: Since Holly has the dominant allele (H) for straight whiskers, her phenotype will be straight whiskers, regardless of the presence of the recessive allele (h).\n\nBased on this reasoning, the correct choice for Holly's phenotype for the whisker type trait is \"straight whiskers.\"\n\nFinal Answer: 0 (straight whiskers)"
+    },
+    {
+        "id": "custom_1",
+        "source": "custom",
+        "question": "Which part of a map typically indicates the direction of north?",
+        "choices": [
+            "Compass rose",
+            "Scale bar",
+            "Legend",
+            "Graticule"
+        ],
+        "model_answer": "To determine which part of a map typically indicates the direction of north, we need to analyze the information provided in the context.\n\n1. **Understanding the Context**: The context mentions cardinal directions, specifically stating that a compass rose is a set of arrows that point to these directions. It also notes that the north arrow points to the North Pole and that on most maps, north is at the top.\n\n2. **Identifying Key Elements**: The key element that indicates the direction of north on a map is the compass rose. This is a common feature on maps that visually represents the cardinal directions, including north, south, east, and west.\n\n3. **Reasoning Process**: Since the question asks specifically about which part of a map indicates north, we can conclude that the compass rose is the correct answer. The compass rose is designed to show the orientation of the map, with the north arrow being a prominent feature that points towards the North Pole.\n\n4. **Final Answer**: Based on this reasoning, the part of a map that typically indicates the direction of north is the compass rose.\n\nFinal Answer: The compass rose."
+    },
+    {
+        "id": "custom_2",
+        "source": "custom",
+        "question": "How does a compass rose help in reading maps?",
+        "choices": [],
+        "model_answer": "To answer the question \"How does a compass rose help in reading maps?\", we need to analyze the function and importance of a compass rose in the context of map reading.\n\n1. **Understanding the Compass Rose**: A compass rose is a graphical representation on a map that displays the cardinal directions: north, south, east, and west. It typically includes arrows pointing in these directions, with north usually positioned at the top of the map.\n\n2. **Role in Navigation**: The compass rose is crucial for navigation as it allows users to orient themselves in relation to the map. By understanding where north is, a person can determine the other directions (south, east, and west) and navigate accordingly.\n\n3. **Locating Places**: When reading a map, the compass rose helps users identify the relative positions of different locations. For instance, if a user wants to find out which state is farther north among a list of states, they can refer to the compass rose to understand the directional layout.\n\n4. **Map Orientation**: The compass rose also assists in orienting the map itself. Knowing that north is at the top helps users align the map with the real world, making it easier to understand distances and directions.\n\n5. **Practical Application**: In the context provided, the compass rose was used to determine which state (Oregon or Maryland) is farther north among the given choices. This illustrates how the compass rose directly aids in making geographical comparisons.\n\nBased on this reasoning, the compass rose helps in reading maps by providing a clear indication of cardinal directions, which is essential for navigation, orientation, and understanding the geographical layout of locations.\n\nFinal Answer: A compass rose helps in reading maps by indicating cardinal directions (north, south, east, west), which is essential for navigation and understanding the layout of locations."
+    },
+    {
+        "id": "custom_3",
+        "source": "custom",
+        "question": "Why might experiments use a control group?",
+        "choices": [],
+        "model_answer": "Chain-of-Thought:\nTo answer the question of why experiments use a control group, we need to analyze the role of a control group in an experimental design. \n\n1. **Understanding Variables**: In an experiment, we have independent variables (the ones we change) and dependent variables (the ones we measure). The context provided mentions an experiment where fertilizer is the independent variable, and the height of pea plants is the dependent variable.\n\n2. **Purpose of a Control Group**: A control group is essential because it serves as a baseline for comparison. By having a group of pea plants grown without fertilizer (the control group), we can observe the natural growth of the plants without any intervention. This allows us to determine if the changes observed in the experimental group (the plants with fertilizer) are indeed due to the addition of fertilizer and not other factors.\n\n3. **Eliminating Confounding Variables**: The control group helps to eliminate confounding variables. It ensures that any differences in plant height can be attributed to the fertilizer rather than other environmental factors, such as soil quality, light, or water availability.\n\n4. **Drawing Conclusions**: By comparing the results from the experimental group and the control group, researchers can draw more reliable conclusions about the effect of the independent variable (fertilizer) on the dependent variable (plant height).\n\nIn summary, the control group is crucial for establishing a point of reference, ensuring that the results of the experiment are valid and that the conclusions drawn are based on the effect of the variable being tested.\n\nFinal Answer: A control group is used to provide a baseline for comparison, allowing researchers to determine the effect of the independent variable (fertilizer) on the dependent variable (plant height)."
+    },
+    {
+        "id": "custom_4",
+        "source": "custom",
+        "question": "Which element is not typically found on a traditional map?",
+        "choices": [
+            "North arrow",
+            "Legend",
+            "Compass",
+            "GPS coordinates"
+        ],
+        "model_answer": "To determine which element is not typically found on a traditional map, we need to analyze the provided choices and understand what is typically represented on maps.\n\n1. **Understanding Map Elements**: Traditional maps usually depict geographical features such as land, water bodies, roads, and sometimes political boundaries. They often use colors and symbols to represent these features.\n\n2. **Analyzing the Choices**:\n   - **Native gold is a solid. It is a pure substance.**: Gold is a mineral and can be represented on geological maps, but it is not a feature that would be shown on a traditional map.\n   - **Chrysotile is a pure substance. It is not made by living things.**: Chrysotile is a type of asbestos, which is also a mineral. Like gold, it may appear on geological maps but not on traditional maps.\n   - **A turtle shell is not a pure substance. It is formed in nature.**: A turtle shell is an organic material and is not a mineral. It is not something that would be represented on a traditional map.\n\n3. **Identifying the Non-Map Element**: While both native gold and chrysotile are minerals that could be represented on geological maps, they are not typically found on traditional maps. However, a turtle shell, being an organic material and not a mineral, is the least likely to be represented on any type of map.\n\n4. **Conclusion**: Since the question asks for the element that is not typically found on a traditional map, the turtle shell stands out as the most appropriate choice.\n\nFinal Answer: A turtle shell is not typically found on a traditional map."
+    },
+    {
+        "id": "custom_5",
+        "source": "custom",
+        "question": "Describe the importance of consistent orientation in map reading.",
+        "choices": [],
+        "model_answer": "To address the question regarding the importance of consistent orientation in map reading, I will first analyze the context provided and then derive a clear answer.\n\n1. **Understanding the Importance of Orientation**: \n   - Maps are designed to represent geographical areas, and they rely on cardinal directions (north, south, east, west) to help users navigate and understand spatial relationships.\n   - Consistent orientation, typically with north at the top of the map, allows for easier interpretation of the map. When users know that north is always at the top, they can quickly determine the relative positions of different locations.\n\n2. **Application to the Given Context**: \n   - The context emphasizes the use of a compass rose, which indicates cardinal directions. This reinforces the idea that understanding which way is east (or any other direction) is crucial for accurately reading a map.\n   - In the examples provided, determining which state is farthest east requires a clear understanding of the map's orientation. If the orientation were inconsistent, it would lead to confusion and potential errors in identifying locations.\n\n3. **Conclusion**: \n   - Consistent orientation in map reading is vital because it ensures that users can accurately interpret the map and understand the geographical relationships between different locations. Without this consistency, navigation and comprehension of spatial information would be significantly hindered.\n\nFinal Answer: Consistent orientation in map reading is important as it allows users to accurately interpret geographical relationships and navigate effectively."
+    },
+    {
+        "id": "custom_6",
+        "source": "custom",
+        "question": "What is one advantage of using multiple data chunks for embedding in a vector database?",
+        "choices": [],
+        "model_answer": "Chain-of-Thought:\n1. The question asks about the advantages of using multiple data chunks for embedding in a vector database. However, the context provided does not directly address vector databases or data embedding. Instead, it focuses on sedimentary rocks, fossils, and their formation and preservation.\n\n2. The choices given are \"fern\" and \"dinosaur footprint.\" These choices seem to relate to the context of fossils. A fern is a type of plant, while a dinosaur footprint is a trace fossil that represents the activity of a dinosaur.\n\n3. To determine the correct answer, I need to consider which of the two options is more relevant to the context of fossils and sedimentary rocks. The lecture mentions that fossils are preserved evidence of ancient organisms and that they can be formed from body parts or traces of activities.\n\n4. A dinosaur footprint is a specific type of fossil that falls under the category of trace fossils, which are formed from the activities of organisms. In contrast, a fern, while it can also be fossilized, does not represent an activity but rather a body part of a plant.\n\n5. Given that the context emphasizes the importance of fossils in sedimentary rocks and the formation of fossils from activities, the dinosaur footprint is more relevant and significant in this context.\n\nFinal Answer: 1 (dinosaur footprint)"
+    },
+    {
+        "id": "custom_7",
+        "source": "custom",
+        "question": "Identify the benefit of using a chain-of-thought approach when answering complex questions.",
+        "choices": [],
+        "model_answer": "Chain-of-Thought:\nTo determine the correct answer for the type of sentence provided in the question, we first need to analyze the structure of the sentence: \"Leroy always approaches difficult tasks enthusiastically, and he frequently motivates others with his energy and fervor.\"\n\n1. **Identify the Components**: The sentence consists of two independent clauses:\n   - \"Leroy always approaches difficult tasks enthusiastically\"\n   - \"he frequently motivates others with his energy and fervor\"\n\n2. **Check for Coordinating Conjunctions**: The two independent clauses are connected by the coordinating conjunction \"and.\" This indicates that the sentence is not simple (which would contain only one independent clause) and not complex (which would contain at least one dependent clause).\n\n3. **Determine the Sentence Type**:\n   - **Simple Sentence**: Contains one independent clause.\n   - **Complex Sentence**: Contains one independent clause and at least one dependent clause.\n   - **Compound Sentence**: Contains two or more independent clauses connected by coordinating conjunctions.\n   - **Compound-Complex Sentence**: Contains at least two independent clauses and at least one dependent clause.\n\nSince we have two independent clauses connected by \"and,\" the sentence is classified as a compound sentence.\n\nFinal Answer: compound"
+    },
+    {
+        "id": "custom_8",
+        "source": "custom",
+        "question": "Which factor is least likely to affect plant growth in a controlled experiment?",
+        "choices": [
+            "Soil type",
+            "Watering schedule",
+            "Ambient noise",
+            "Light exposure"
+        ],
+        "model_answer": "To determine which factor is least likely to affect plant growth in a controlled experiment, we need to analyze the two experimental questions provided in the context.\n\n1. **Understanding the Questions**:\n   - The first question asks whether more tomato seedlings grow when planted in soil with fertilizer compared to soil without fertilizer. This question directly relates to the impact of fertilizer on plant growth, which is a significant factor in agricultural science.\n   - The second question investigates whether the humidity level where tomato seeds are planted affects the number of tomato seedlings that grow. This question focuses on environmental conditions, specifically humidity, and its effect on plant growth.\n\n2. **Identifying the Factors**:\n   - Fertilizer is a nutrient source that can significantly enhance plant growth by providing essential nutrients.\n   - Humidity is an environmental factor that can influence seed germination and plant health, but its effect may vary depending on the type of plant and other conditions.\n\n3. **Evaluating the Impact**:\n   - In a controlled experiment, both fertilizer and humidity are important factors that can affect plant growth. However, the impact of fertilizer is typically more direct and pronounced, as it provides the necessary nutrients for growth.\n   - Humidity, while important, may not have as strong or direct an effect as the presence or absence of fertilizer. Plants can often adapt to a range of humidity levels, whereas the lack of nutrients (fertilizer) can lead to stunted growth or failure to thrive.\n\n4. **Conclusion**:\n   - Given that the question asks for the factor least likely to affect plant growth, we can conclude that humidity is less critical compared to the presence of fertilizer. Therefore, the question regarding humidity is the one that is least likely to affect plant growth in a controlled experiment.\n\nFinal Answer: Does the humidity level where tomato seeds are planted affect the number of tomato seedlings that grow? (This is the question that is least likely to affect plant growth.)"
+    },
+    {
+        "id": "custom_9",
+        "source": "custom",
+        "question": "Explain how artificial intelligence can enhance scientific inquiry.",
+        "choices": [],
+        "model_answer": "To determine the correct answer to the question regarding Cooper's experiment, we need to analyze the provided choices in relation to the context of the experiment.\n\n1. **Understanding the Choices**:\n   - The first choice is: \"Does water freeze more quickly than apple juice?\"\n   - The second choice is: \"Does apple juice expand more or less than water when it freezes?\"\n\n2. **Identifying the Experimental Focus**:\n   - The first choice is focused on the freezing rate of water compared to apple juice. This suggests an investigation into the time it takes for each liquid to freeze.\n   - The second choice is focused on the physical property of expansion during the freezing process, comparing how much each liquid expands when it freezes.\n\n3. **Analyzing the Context**:\n   - The context indicates that we are looking for the question that Cooper's experiment can best answer. Without specific details about Cooper's experiment, we can infer that the question should align with the primary focus of the experiment.\n   - If Cooper's experiment is designed to measure the freezing rates, then the first choice would be more appropriate. Conversely, if it is designed to measure the expansion properties of the liquids, then the second choice would be more suitable.\n\n4. **Determining the Correct Answer**:\n   - Since the answer index for Cooper's experiment is indicated as 1, this means the correct choice is the second one: \"Does apple juice expand more or less than water when it freezes?\" This aligns with the index provided, suggesting that Cooper's experiment is focused on the expansion properties of the liquids during freezing.\n\n5. **Conclusion**:\n   - Based on the reasoning above, the correct answer to the question regarding Cooper's experiment is the second choice.\n\nFinal Answer: Does apple juice expand more or less than water when it freezes?"
+    },
+    {
+        "id": "custom_10",
+        "source": "custom",
+        "question": "Discuss the role of context in retrieving relevant information from a knowledge base.",
+        "choices": [],
+        "model_answer": "To analyze the question, we need to focus on the term \"factoid\" and its traditional sense. Traditionally, a \"factoid\" refers to a piece of information that is presented as a fact but is actually either unverified, trivial, or misleading. \n\nNow, let's examine the two choices provided:\n\n1. **Oscar subscribed to an online newsletter about African wildlife; he enjoyed receiving daily factoids about the wild animals' natural habitats and behavior.**\n   - In this context, the term \"factoids\" seems to refer to small pieces of information that Oscar finds enjoyable and informative. However, it does not imply that these pieces of information are necessarily trivial or misleading. Instead, it suggests that they are simply facts presented in a digestible format.\n\n2. **Oscar seemed to know a lot about African wildlife, but it turned out that his knowledge was mostly based on factoids gleaned from unreliable websites.**\n   - Here, \"factoids\" is used in a more traditional sense. It indicates that Oscar's knowledge is based on pieces of information that are likely unverified or trivial, especially since they come from unreliable sources. This aligns with the traditional definition of \"factoid\" as something that may not be a true fact.\n\nGiven this analysis, the second choice uses \"factoid\" in its traditional sense, as it highlights the unreliable and potentially misleading nature of the information Oscar has.\n\nNow, regarding the question about the role of context in retrieving relevant information from a knowledge base, context is crucial because it shapes how we interpret terms and phrases. The same word can have different meanings based on the surrounding information. In this case, the context of how \"factoid\" is used in each sentence determines whether it aligns with its traditional definition.\n\nFinal Answer: 1"
+    }
+]
