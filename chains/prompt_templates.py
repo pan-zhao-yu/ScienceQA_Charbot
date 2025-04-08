@@ -28,4 +28,4 @@ Question:
 Answer (explain clearly and give the final answer at the end):"""
 
 
-# def get_prompt_template():
+# def get_prompt_template(): #     return """You are a helpful and knowledgeable science tutor for students from elementary to high school.
