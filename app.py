@@ -49,12 +49,12 @@ while True:
             print(f"\n--- Chunk {i+1} ---")
             print(doc.metadata.get("full_content", doc.page_content))
 
-        # 将检索到的内容拼接成上下文文本
+        # retrieve context text
         context_text = "\n".join(
             [doc.metadata.get("full_content", doc.page_content) for doc in retrieved_docs]
         )
 
-        # 使用 prompt 模板生成最终的 prompt 内容，并打印出来
+        # print final prompt input
         prompt_content = prompt.format(context=context_text, question=query)
         print("\n📝📝📝 Final Prompt:")
         print(prompt_content)
