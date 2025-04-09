@@ -1,3 +1,5 @@
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 import json
 from datasets import load_dataset
 from langchain_community.vectorstores import FAISS
@@ -5,11 +7,11 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.chains import RetrievalQA
 from langchain_openai.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
-from chains.prompt_templates import get_prompt_template
+from chains.prompt_templates import get_prompt_template, get_prompt_template_COT
 import logging
 
 # -------------------------------
-# 1. 数据准备：抽取 20 个数据集中的问题
+# 1. 数据准备：从数据集中抽取20个问题
 # -------------------------------
 logging.getLogger("transformers.tokenization_utils_base").setLevel(logging.ERROR)
 
@@ -18,7 +20,7 @@ dataset = load_dataset("derek-thomas/ScienceQA")
 train_data = dataset["train"]
 
 dataset_questions = []
-# 从数据集中抽取前20个问题
+# 从数据集中抽取前20个样本的问题
 for idx, example in enumerate(train_data):
     if idx >= 20:
         break
@@ -31,7 +33,7 @@ for idx, example in enumerate(train_data):
     dataset_questions.append(q)
 
 # -------------------------------
-# 2. 定义 10 个额外的自选问题（英文）
+# 2. 定义10个额外自选英文问题（可以根据需要选择开放题或者多选题）
 # -------------------------------
 custom_questions = [
     {
@@ -97,11 +99,10 @@ custom_questions = [
 ]
 
 # -------------------------------
-# 3. 合并问题列表并生成 JSON 文件
+# 3. 合并问题，并保存到 evaluation_questions.json 文件（便于后续查看）
 # -------------------------------
 all_questions = dataset_questions + custom_questions
 
-# 保存问题到 evaluation_questions.json
 with open("evaluation_questions.json", "w", encoding="utf-8") as f:
     json.dump(all_questions, f, ensure_ascii=False, indent=4)
 print("Evaluation questions saved to evaluation_questions.json")
@@ -118,10 +119,10 @@ retriever = vectorstore.as_retriever(search_kwargs={"k": 2})
 # 请确保替换下面 API Key 为有效值
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2, api_key="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")
 
-# 定义问答提示模板（使用之前定义的模板）
+# 定义问答提示模板（这里使用之前的模板）
 prompt = PromptTemplate(
     input_variables=["context", "question"],
-    template=get_prompt_template()
+    template=get_prompt_template_COT()
 )
 
 # 构建 Retrieval-Augmented Generation (RAG) 问答链
@@ -133,17 +134,20 @@ rag_chain = RetrievalQA.from_chain_type(
 )
 
 # -------------------------------
-# 5. 循环提问，并收集模型的回答
+# 5. 循环提问，收集模型回答和检索的上下文信息
 # -------------------------------
 evaluation_results = []
 for q in all_questions:
     question_text = q["question"]
     try:
-        # 可选：获得检索的文档上下文（用于调试或后续分析）
-        retrieved_docs = retriever.get_relevant_documents(question_text)
-        # 使用 RAG Chain 得到答案
+        # 获取检索的文档上下文，列表中每项为对应文档的 page_content（可以根据需要进一步截断或加工）
+        retrieved_docs = retriever.invoke(question_text)
+        # 将每个文档内容简单提取出来，存入列表
+        retrieved_contexts = [doc.page_content for doc in retrieved_docs]
+
+        # 使用 RAG 问答链得到模型回答
         answer = rag_chain.invoke(question_text)
-        # 处理回答格式：可能是字典（包含 "result" 键）、对象或字符串
+        # 判断回答格式
         if isinstance(answer, dict) and "result" in answer:
             answer_text = answer["result"]
         elif hasattr(answer, "content"):
@@ -152,20 +156,22 @@ for q in all_questions:
             answer_text = str(answer)
     except Exception as e:
         answer_text = f"Error: {e}"
+        retrieved_contexts = []
 
     result = {
         "id": q["id"],
         "source": q["source"],
         "question": question_text,
         "choices": q["choices"],
-        "model_answer": answer_text
+        "model_answer": answer_text,
+        "retrieved_contexts": retrieved_contexts
     }
     evaluation_results.append(result)
     print(f"Processed question {q['id']}")
 
 # -------------------------------
-# 6. 保存提问及答案结果到 evaluation_4omini_defaultPrompt_results.json
+# 6. 保存问题、模型答案以及检索的上下文到 evaluation_4omini_COTPrompt_results.json 文件
 # -------------------------------
 with open("evaluation_results.json", "w", encoding="utf-8") as f:
     json.dump(evaluation_results, f, ensure_ascii=False, indent=4)
-print("Evaluation results saved to evaluation_results.json")
+print("Evaluation results with retrieved contexts saved to evaluation_results.json")

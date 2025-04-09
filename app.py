@@ -1,3 +1,5 @@
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.chains import RetrievalQA
@@ -5,10 +7,6 @@ from chains.prompt_templates import get_prompt_template, get_prompt_template_COT
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain_openai.chat_models import ChatOpenAI
-import logging
-#停止一些不必要的警告
-logging.getLogger("transformers.tokenization_utils_base").setLevel(logging.ERROR)
-
 
 
 embedding = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
@@ -43,7 +41,7 @@ while True:
         break
     try:
         #print information retrieved from vectorstore
-        retrieved_docs = retriever.get_relevant_documents(query)
+        retrieved_docs = retriever.invoke(query)
         print("\n📚📚📚 Retrieved Contexts:")
         for i, doc in enumerate(retrieved_docs):
             print(f"\n--- Chunk {i+1} ---")
