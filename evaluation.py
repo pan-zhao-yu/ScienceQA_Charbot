@@ -117,7 +117,7 @@ vectorstore = FAISS.load_local("vectorstore/faiss_index", embeddings=embedding, 
 retriever = vectorstore.as_retriever(search_kwargs={"k": 2})
 
 # 请确保替换下面 API Key 为有效值
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2, api_key="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")
+llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.2, api_key="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")
 
 # 定义问答提示模板（这里使用之前的模板）
 prompt = PromptTemplate(

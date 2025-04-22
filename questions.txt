@@ -28,3 +28,28 @@
 [Question] is the following trait inherited or acquired? katy plays soccer.[Choices] inherited, acquired
 --------------------------------------------------
 [Question] based on this information, what is holly's phenotype for the whisker type trait?[Choices] straight whiskers, curved whiskers
+
+"1":{
+    "question":"Which of these states is farthest north?",
+    "choices":[
+      "West Virginia",
+      "Louisiana",
+      "Arizona",
+      "Oklahoma"
+    ],
+    "answer":0,
+    "hint":"",
+    "image":"image.png",
+    "task":"closed choice",
+    "grade":"grade2",
+    "subject":"social science",
+    "topic":"geography",
+    "category":"Geography",
+    "skill":"Read a map: cardinal directions",
+    "lecture":"Maps have four cardinal directions, or main directions. Those directions are north,
+    south, east, and west.\nA compass rose is a set of arrows that point to the cardinal directions.
+    A compass rose usually shows only the first letter of each cardinal direction.\nThe north arrow
+    points to the North Pole. On most maps, north is at the top of the map.",
+    "solution":"To find the answer, look at the compass rose. Look at which way the north arrow is
+    pointing. West Virginia is farthest north.",
+    "split":"train"

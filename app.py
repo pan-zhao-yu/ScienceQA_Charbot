@@ -18,7 +18,7 @@ vectorstore = FAISS.load_local("vectorstore/faiss_index", embeddings=embedding, 
 retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
 
 #API KEY
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2, api_key="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")
+llm = ChatOpenAI(model="gpt-4.1", temperature=0.2, api_key="API_KEY")
 
 #Prompt template
 prompt = PromptTemplate(
@@ -59,8 +59,6 @@ while True:
 
         #RAG Chain Answer
         answer = rag_chain.invoke(query)
-        #use print(f"\n🧠 Answer:\n{answer}") to print full output
-        #use print(f"\n🧠 Answer:\n{answer['result']}") to print the answer only
         print(f"\n🧠🧠🧠 Answer:\n{answer['result']}")
     except Exception as e:
         print(f"❌ Error: {e}")
