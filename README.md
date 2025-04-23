@@ -4,6 +4,7 @@
 This project is an interactive, retrieval-augmented generation (RAG) chatbot designed to answer science-related questions using real context from the ScienceQA dataset. It combines a FAISS vector database, sentence-transformer embeddings, and OpenAI's GPT-4.1 model through LangChain.
 
 ## Project Structure
+```
 .
 ├── vectorstore/               # Saved FAISS index
 ├── chains/
@@ -11,7 +12,7 @@ This project is an interactive, retrieval-augmented generation (RAG) chatbot des
 ├── prepare.py      # Script to create FAISS index from ScienceQA dataset
 ├── app.py         # Main script to run the QA chatbot
 └── README.md                 # You're here :)
-
+```
 
 
 
