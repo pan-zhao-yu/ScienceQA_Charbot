@@ -6,6 +6,7 @@ This project is an interactive, retrieval-augmented generation (RAG) chatbot des
 ## Project Structure
 
 <img width="536" alt="Screenshot 2025-04-07 at 11 48 55" src="https://github.com/user-attachments/assets/fb49ad9f-e5a6-4c47-a4cf-a86c847c6c22" />
+
 ```
 .
 ├── vectorstore/               # Saved FAISS index
